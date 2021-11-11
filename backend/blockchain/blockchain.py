@@ -1,4 +1,7 @@
-from block import Block, genesis, mine_block
+"""
+Blockchain Module.
+"""
+from backend.blockchain.block import Block
 
 
 class Blockchain:
@@ -8,11 +11,11 @@ class Blockchain:
     """
 
     def __init__(self):
-        self.chain = [genesis()]
+        self.chain = [Block.genesis()]
 
     def add_block(self, data):
         last_block = self.chain[-1]
-        new_block = mine_block(last_block.hash, data)
+        new_block = Block.mine_block(last_block, data)
         self.chain.append(new_block)
 
     def __repr__(self):

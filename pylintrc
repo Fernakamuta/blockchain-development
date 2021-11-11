@@ -1,0 +1,2 @@
+[MASTER]
+init-hook='import sys; sys.path.append("/home/nakubuntu/Documents/Personal/blockchain-develop/python-blockchain")'
